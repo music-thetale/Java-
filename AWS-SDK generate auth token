@@ -1,0 +1,27 @@
+package com.amazonaws.codesamples;
+
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
+import com.amazonaws.services.rds.auth.GetIamAuthTokenRequest;
+import com.amazonaws.services.rds.auth.RdsIamAuthTokenGenerator;
+
+public  class GenerateRDSAuthToken {
+  
+  public static void main(String[] args) {
+  
+      String region = "us-west-2";
+      String hostname = "rdsmysql.cdgmuqiadpid.us-west-2.rds.amazonaws.com";
+      String port = "3306";
+      String username = "jane_doe";
+      
+      System.out.println(generateAuthToken(String region, String hostName, String port, String username) {
+      
+          RdsIamAuthTokenGenerator generator = generator.getAuthToken(
+              GetIamAuthTokenRequest.build()
+              .hostname(hostName)
+              .port(Integer.parseInt(port))
+              .userName(username)
+              .build();
+              
+           return authToken;
+        }
+      }
